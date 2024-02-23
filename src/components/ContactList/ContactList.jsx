@@ -12,7 +12,7 @@ export const ContactList = () => {
   return (
     <ul className={styles.box}>
       {filteredContacts.map(item => {
-        return <Contact name={item.name} phone={item.number} id={item.id} key={item.id} />;
+        return <Contact name={item.name} phone={item.phone} id={item.id} key={item.id} />;
       })}
     </ul>
   );

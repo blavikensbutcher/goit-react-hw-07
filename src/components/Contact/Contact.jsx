@@ -1,8 +1,8 @@
 import styles from './Contact.module.css';
 import { MdPeopleAlt } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { deleteContact } from '../../api/api';
 import { useDispatch } from 'react-redux';
-import { removeContact } from '../../redux/contactSlice.js';
 
 export const Contact = ({ id, name, phone }) => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export const Contact = ({ id, name, phone }) => {
         </p>
       </div>
       <div>
-        <button className={styles.btn} onClick={() => dispatch(removeContact(id))}>
+        <button className={styles.btn} onClick={() => dispatch(deleteContact(id))}>
           Delete
         </button>
       </div>
